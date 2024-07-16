@@ -1,0 +1,1 @@
+This project is to build an app for android phone; while can display real time wallpapers. I can start the app when I'm gaming or working which will look the empty black of the phone into animated scenery.
