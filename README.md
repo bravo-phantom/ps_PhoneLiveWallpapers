@@ -15,10 +15,8 @@
 
   Presenting To you :
 
-  <h1>
-    
-    Phone Live Wallpapers
-  
-  </h1>
+<h1>
+Phone Live Wallpapers
+</h1>
 
 </div>
