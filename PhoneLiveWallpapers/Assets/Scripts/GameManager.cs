@@ -23,20 +23,23 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //if (Application.platform == RuntimePlatform.Android)
-        //{
-            // If video is running; go back to main menu
-            if (Input.GetKeyDown(KeyCode.Escape) && isVideoRunning)
-            {
-                StopVideo();
-            }
+        // If video is running; go back to main menu
+        if (Input.GetKeyDown(KeyCode.Escape) && isVideoRunning)
+        {
+            StopVideo();
+        }
 
-            // If video is not running; open the back menu
-            else if (Input.GetKeyDown(KeyCode.Escape) && !isVideoRunning && !backCanvas.activeInHierarchy)
-            {
-                backCanvas.SetActive(true);
-            }
-        //}
+        // If video is not running; open the back menu
+        else if (Input.GetKeyDown(KeyCode.Escape) && !isVideoRunning && !backCanvas.activeInHierarchy)
+        {
+            backCanvas.SetActive(true);
+        }
+
+        //If the back menu is opened; clsoe the back menu
+        else if (Input.GetKeyDown(KeyCode.Escape) && backCanvas.activeInHierarchy)
+        {
+            OnExitNoBtnClicked();
+        }
     }
 
     private void Initialize()
