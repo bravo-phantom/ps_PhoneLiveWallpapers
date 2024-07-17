@@ -6,13 +6,17 @@ using UnityEngine.Video;
 public class GameManager : MonoBehaviour
 {
     [Header ("UI")]
-    [SerializeField] private GameObject mainCanvas;
-    [SerializeField] private GameObject videoCanvas;
-    [SerializeField] private GameObject backCanvas;
+    [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private GameObject videoPanel;
+    [SerializeField] private GameObject backPanel;
 
     [Header ("Videos")]
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private VideoClip[] videoClip;
+
+    [Header("Animations")]
+    [SerializeField] private Animator videoPanelAnimator;
+    [SerializeField] private Animator backPanelAnimator;
 
     private bool isVideoRunning;
 
@@ -30,13 +34,13 @@ public class GameManager : MonoBehaviour
         }
 
         // If video is not running; open the back menu
-        else if (Input.GetKeyDown(KeyCode.Escape) && !isVideoRunning && !backCanvas.activeInHierarchy)
+        else if (Input.GetKeyDown(KeyCode.Escape) && !isVideoRunning && !backPanel.activeInHierarchy)
         {
-            backCanvas.SetActive(true);
+            backPanel.SetActive(true);
         }
 
         //If the back menu is opened; clsoe the back menu
-        else if (Input.GetKeyDown(KeyCode.Escape) && backCanvas.activeInHierarchy)
+        else if (Input.GetKeyDown(KeyCode.Escape) && backPanel.activeInHierarchy)
         {
             OnExitNoBtnClicked();
         }
@@ -44,17 +48,17 @@ public class GameManager : MonoBehaviour
 
     private void Initialize()
     {
-        mainCanvas.SetActive(true);
-        videoCanvas.SetActive(false);
-        backCanvas.SetActive(false);
+        mainMenuPanel.SetActive(true);
+        videoPanel.SetActive(false);
+        backPanel.SetActive(false);
         isVideoRunning = false;
     }
 
     public void PlayVideo(int videoNumber)
     {
-        // Initialize Canvas
-        videoCanvas.SetActive(true);
-        mainCanvas.SetActive(false);
+        // Initialize Panels
+        videoPanel.SetActive(true);
+        Invoke("CloseMainMenu" , 0.5f);
 
         // Update Data
         isVideoRunning = true;
@@ -73,7 +77,11 @@ public class GameManager : MonoBehaviour
 
     public void OnExitNoBtnClicked()
     {
-        backCanvas.SetActive(false);
+        // Start Back panel clsoe animation
+        backPanelAnimator.SetTrigger("Close");
+
+        // Clsoe back panel
+        Invoke("CloseBackPanel" , 0.25f);
     }
 
     private void StopVideo()
@@ -81,11 +89,31 @@ public class GameManager : MonoBehaviour
         // Stop Video
         videoPlayer.Stop();
 
-        // Go back to main menu
-        mainCanvas.SetActive(true);
-        videoCanvas.SetActive(false);
+        // Open main menu
+        mainMenuPanel.SetActive(true);
+        
+        // Start clsoe animation of video panel
+        videoPanelAnimator.SetTrigger("Close");
+
+        // Close Video Panel
+        Invoke("CloseVideoPanel" , 0.5f);
 
         // Update Data
         isVideoRunning = false;
+    }
+
+    private void CloseMainMenu()
+    {
+        mainMenuPanel.SetActive(false);
+    }
+
+    private void CloseVideoPanel()
+    {
+        videoPanel.SetActive(false);
+    }
+
+    private void CloseBackPanel()
+    {
+        backPanel.SetActive(false);
     }
 }
