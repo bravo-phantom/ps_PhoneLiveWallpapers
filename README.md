@@ -10,8 +10,8 @@
   
   Your Phone Alongside Your Computer ☀ You Watching It's Blank + Black Screen
 
-<img src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRhaGJ1Ymk5MTV2ejM1czJwemhmb3U5OXIxNHBhZ3MwN3FpMXhjMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/lRc0riwAfCcK3stcr2/giphy.gif" width="200" align="right">
-<img src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmx2NmxoYjVnOWtmNHhqdG00ZTN4aDFtOXRxem1hc2YycWY5ejc5aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wIHIITzzIa0miorFQE/giphy.gif" width="200" align="left">
+<img src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRhaGJ1Ymk5MTV2ejM1czJwemhmb3U5OXIxNHBhZ3MwN3FpMXhjMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/lRc0riwAfCcK3stcr2/giphy.gif" width="200" align="left">
+<img src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmx2NmxoYjVnOWtmNHhqdG00ZTN4aDFtOXRxem1hc2YycWY5ejc5aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wIHIITzzIa0miorFQE/giphy.gif" width="200" align="right">
 
   Presenting To you :
 
