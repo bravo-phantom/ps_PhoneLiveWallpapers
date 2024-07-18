@@ -15,7 +15,7 @@
 
   Presenting To you :
 
-# Phone Live Wallpapers
+<img src = "GitHubReadMeFiles/PhoneLiveWallpapers-Title" height="100" align="centre">
 
 *does not change wallpaper of phone *
 
