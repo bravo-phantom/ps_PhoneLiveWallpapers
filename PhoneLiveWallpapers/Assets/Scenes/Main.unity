@@ -186,6 +186,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: c4634351d684ff0489a1655ddba76e88, type: 3}
   videoPanelAnimator: {fileID: 1337382492}
   backPanelAnimator: {fileID: 542996491}
+  fpsText: {fileID: 0}
 --- !u!1 &25553592
 GameObject:
   m_ObjectHideFlags: 0

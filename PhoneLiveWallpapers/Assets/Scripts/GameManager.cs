@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Initialize();
+        StopPhoneSleeping();
+        CapFrameRate();
     }
 
     private void Update()
@@ -115,5 +118,15 @@ public class GameManager : MonoBehaviour
     private void CloseBackPanel()
     {
         backPanel.SetActive(false);
+    }
+
+    private void StopPhoneSleeping()
+    {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+    }
+
+    private void CapFrameRate()
+    {
+        Application.targetFrameRate = 30;
     }
 }
