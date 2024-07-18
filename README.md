@@ -15,7 +15,7 @@
 
   Presenting To you :
 
-<img src = "GitHubReadMeFiles/PhoneLiveWallpapers-Title" height="100" align="centre">
+<img src = "GitHubReadMeFiles/PhoneLiveWallpapers-Title.png" height="100" align="centre">
 
 *does not change wallpaper of phone *
 
