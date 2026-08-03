@@ -15,11 +15,11 @@ VideoClipImporter:
   targetSettings:
     0:
       enableTranscoding: 1
-      codec: 3
+      codec: 0
       resizeFormat: 7
       aspectRatio: 0
-      customWidth: 720
-      customHeight: 1280
+      customWidth: 1080
+      customHeight: 1920
       bitrateMode: 2
       spatialQuality: 2
   userData: 
